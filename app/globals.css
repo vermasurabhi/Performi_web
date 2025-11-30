@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Suranna&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors - Update these from lib/theme.ts */
+  --color-soft-pink: #e0a5a4;
+  --color-deep-red: #a9444a;
+  --color-coral-pink: #e0857f;
+  --color-deep-olive: #4e5033;
+  --color-warm-olive: #7d7956;
+  --color-beige: #e5d4ca;
+
+  /* Fonts */
+  --font-suranna: 'Suranna', serif;
+  --font-josefin: 'Josefin Sans', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-deep-olive;
+    font-family: var(--font-josefin);
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background-color: #e5d4ca;
+    background-image: radial-gradient(at 64% 68%, #e0a5a4, transparent 50%), 
+                      radial-gradient(at 3% 8%, #a9444a, transparent 50%), 
+                      radial-gradient(at 100% 1%, #e0857f, transparent 50%), 
+                      radial-gradient(at 0% 99%, #4e5033, transparent 50%), 
+                      radial-gradient(at 100% 100%, #7d7956, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  .bg-gradient-to-br {
+    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  }
+
+  .suranna-regular {
+    font-family: "Suranna", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
